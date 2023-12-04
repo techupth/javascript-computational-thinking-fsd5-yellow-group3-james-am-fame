@@ -82,3 +82,10 @@ let orders = [
 ];
 
 // Start coding here
+let totalOrderAmount = 0;
+for (let { productPrice, productQuantity } of orders) {
+  totalOrderAmount += (productPrice * productQuantity);
+}
+
+const message = `Total amount of the orders: ${totalOrderAmount.toLocaleString('en-US')} Baht`
+console.log(message)
