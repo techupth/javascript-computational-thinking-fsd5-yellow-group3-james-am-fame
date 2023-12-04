@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+
+let totalOrderAmount = 0;
+for (let { productPrice, productQuantity, customerName } of orders) {
+  if (customerName === "Birdie Shepland") {
+    totalOrderAmount += (productPrice * productQuantity);
+  }
+}
+
+const message = `Total paid amount of Birdie Shepland: ${totalOrderAmount.toLocaleString('en-US')} Baht`
+console.log(message)
