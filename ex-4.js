@@ -84,14 +84,14 @@ let orders = [
 function findMostExpansive() {
   let mostExpansive = 0;
 
-  for (let keys of orders) {
-    if (keys.productPrice > mostExpansive) {
-      mostExpansive = keys.productPrice;
+  for (let order of orders) {
+    if (order.productPrice > mostExpansive) {
+      mostExpansive = order.productPrice;
     }
   }
-  for (let keys of orders) {
-    if (mostExpansive === keys.productPrice) {
-      return keys.productName;
+  for (let order of orders) {
+    if (mostExpansive === order.productPrice) {
+      return order.productName;
     }
   }
 }

@@ -83,9 +83,9 @@ let orders = [
 
 function findPaidOfBirdie() {
   let paidOfBirdie = 0;
-  for (let keys of orders) {
-    keys.customerName === "Birdie Shepland"
-      ? (paidOfBirdie = keys.productPrice * keys.productQuantity)
+  for (let order of orders) {
+    order.customerName === "Birdie Shepland"
+      ? (paidOfBirdie = order.productPrice * order.productQuantity)
       : 0;
   }
   return paidOfBirdie;

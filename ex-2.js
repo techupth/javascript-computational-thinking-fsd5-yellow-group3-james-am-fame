@@ -83,9 +83,9 @@ let orders = [
 
 function findPaidByJcb() {
   let paidByJcb = 0;
-  for (let keys of orders) {
-    keys.creditCardType === "jcb"
-      ? (paidByJcb = paidByJcb + keys.productPrice * keys.productQuantity)
+  for (let order of orders) {
+    order.creditCardType === "jcb"
+      ? (paidByJcb = paidByJcb + order.productPrice * order.productQuantity)
       : 0;
   }
   return paidByJcb;

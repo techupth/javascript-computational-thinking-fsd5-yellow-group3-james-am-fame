@@ -83,8 +83,8 @@ let orders = [
 
 function findTotalPrice() {
   let totalPrice = 0;
-  for (let keys of orders) {
-    totalPrice = totalPrice + keys.productPrice * keys.productQuantity;
+  for (let order of orders) {
+    totalPrice = totalPrice + order.productPrice * order.productQuantity;
   }
   return totalPrice;
 }

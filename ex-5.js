@@ -84,12 +84,12 @@ let orders = [
 function findMostExpansiveOrder() {
   let MostExpansiveObject = { ...orders[0] };
 
-  for (let keys of orders) {
+  for (let order of orders) {
     if (
-      keys.productPrice * keys.productQuantity >
+      order.productPrice * order.productQuantity >
       MostExpansiveObject.productPrice * MostExpansiveObject.productQuantity
     ) {
-      MostExpansiveObject = keys;
+      MostExpansiveObject = order;
     }
   }
 
