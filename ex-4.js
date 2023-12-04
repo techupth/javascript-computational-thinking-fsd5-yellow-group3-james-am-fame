@@ -82,3 +82,17 @@ let orders = [
 ];
 
 // Start coding here
+let highestPirce = 0;
+
+//ให้ใช้ For Loop หาชื่อของสินค้าที่มีราคาต่อชิ้นสูงที่สุดใน orders และนำชื่อสินค้านั้นมาแสดงผลบนหน้าจอ Console
+//The most expensive product in orders: Wine - Red, Harrow Estates, Cab
+
+for (let i = 0; i < orders.length; i++) {
+  if (i === 0) {
+    highestPirce = orders[i].productPrice;
+  } else if (orders[i].productPrice > highestPirce) {
+    highestPirce = orders[i].productName;
+  }
+}
+highestPirce = `The most expensive product in orders: ${highestPirce}`;
+console.log(highestPirce);
