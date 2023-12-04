@@ -81,4 +81,21 @@ let orders = [
   },
 ];
 
-// Start coding here
+function findMostExpansive() {
+  let mostExpansive = 0;
+
+  for (let keys of orders) {
+    if (keys.productPrice > mostExpansive) {
+      mostExpansive = keys.productPrice;
+    }
+  }
+  for (let keys of orders) {
+    if (mostExpansive === keys.productPrice) {
+      return keys.productName;
+    }
+  }
+}
+
+console.log(
+  `The most expensive product in orders: ${findMostExpansive(orders)}`
+);

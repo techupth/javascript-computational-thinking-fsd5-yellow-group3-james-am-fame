@@ -81,4 +81,17 @@ let orders = [
   },
 ];
 
-// Start coding here
+function findPaidByJcb() {
+  let paidByJcb = 0;
+  for (let keys of orders) {
+    keys.creditCardType === "jcb"
+      ? (paidByJcb = paidByJcb + keys.productPrice * keys.productQuantity)
+      : 0;
+  }
+  return paidByJcb;
+}
+console.log(
+  `Paid by JCB credit card amount: ${findPaidByJcb(
+    orders
+  ).toLocaleString()} Bath`
+);

@@ -81,4 +81,13 @@ let orders = [
   },
 ];
 
-// Start coding here
+function findTotalPrice() {
+  let totalPrice = 0;
+  for (let keys of orders) {
+    totalPrice = totalPrice + keys.productPrice * keys.productQuantity;
+  }
+  return totalPrice;
+}
+console.log(
+  `Total amount of the orders: ${findTotalPrice(orders).toLocaleString()} Bath`
+);

@@ -81,4 +81,18 @@ let orders = [
   },
 ];
 
-// Start coding here
+function findPaidOfBirdie() {
+  let paidOfBirdie = 0;
+  for (let keys of orders) {
+    keys.customerName === "Birdie Shepland"
+      ? (paidOfBirdie = keys.productPrice * keys.productQuantity)
+      : 0;
+  }
+  return paidOfBirdie;
+}
+
+console.log(
+  `Total paid amount of Birdie Shepland: ${findPaidOfBirdie(
+    orders
+  ).toLocaleString()} Bath`
+);
